@@ -1,5 +1,3 @@
-# newsapp/apps.py
-
 from django.apps import AppConfig
 
 class NewsappConfig(AppConfig):
