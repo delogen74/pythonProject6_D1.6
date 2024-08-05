@@ -1,5 +1,3 @@
-# newsapp/models.py
-
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Sum
@@ -42,7 +40,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     rating = models.SmallIntegerField(default=0)
-    image = models.ImageField(upload_to='post_images/', null=True, blank=True)  # Новое поле для изображения
+    image = models.ImageField(upload_to='post_images/', null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.text = self.censor_vulgar_words(self.text)
